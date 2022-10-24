@@ -21,6 +21,16 @@ export function useQueryNodeTransactionStatus(isProcessing: boolean, blockHash?:
   }, [!queryNodeState, isProcessing])
 
   useEffect(() => {
+    if (!queryNodeState) {
+      const timeout = setTimeout(() => {
+        setStatus('confirmed')
+      }, 10_000)
+
+      return () => clearTimeout(timeout)
+    }
+  }, [!queryNodeState])
+
+  useEffect(() => {
     if (queryNodeState) {
       setStatus(blockHash === queryNodeBlockHash ? 'confirmed' : 'rejected')
     }
