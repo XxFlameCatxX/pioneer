@@ -28,7 +28,7 @@ export function useQueryNodeTransactionStatus(isProcessing: boolean, blockHash?:
 
       return () => clearTimeout(timeout)
     }
-  }, [!queryNodeState])
+  }, [!queryNodeState, isProcessing])
 
   useEffect(() => {
     if (queryNodeState) {
