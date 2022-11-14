@@ -14,6 +14,7 @@ import { ProposalStatus } from '@/proposals/types'
 import { FilterTextSelect } from '../../../common/components/selects'
 
 import { toCamelCase } from './helpers'
+import { useLocalStorage } from '@/common/hooks/useLocalStorage'
 
 export interface ProposalFiltersState {
   search: string
