@@ -17,7 +17,6 @@ import { useProposals } from '@/proposals/hooks/useProposals'
 import { useProposalsActivities } from '@/proposals/hooks/useProposalsActivities'
 
 import { ProposalsTabs } from './components/ProposalsTabs'
-import { useLocalStorage } from '@/common/hooks/useLocalStorage'
 
 export const PastProposals = () => {
   const searchSlot = useRef<HTMLDivElement>(null)
