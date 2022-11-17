@@ -46,8 +46,8 @@ export const UpdateMembershipModal = () => {
     )
   }
 
-  if (active && state.matches('success')) {
-    return <UpdateMembershipSuccessModal onClose={hideModal} member={active} />
+  if (state.matches('success')) {
+    return <UpdateMembershipSuccessModal onClose={hideModal} member={member} />
   }
 
   return null
