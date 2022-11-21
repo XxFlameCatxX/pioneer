@@ -110,6 +110,15 @@ export const fileToDataUrl = (file: File) => {
     reader.readAsDataURL(file)
   })
 }
+export const resizeImageFile = async (
+  file: File,
+  width: number,
+  height: number,
+  type?: string
+): Promise<Blob | null> => {
+  if (!SUPPORTED_IMAGES.filter((type) => type !== 'image/svg+xml').includes(file.type)) {
+    throw new Error('Wrong file type')
+  }
 
 export const resizeImageFile = async (
   file: File,
