@@ -10,6 +10,6 @@ packages/ui/src/services/i18n/utils/csv
 !.yarn/versions
 !.yarn/sdks
 !.yarn/releases
-!.yarn/plugins
 !.yarn/patches
+!.yarn/plugins
 .yarn/*
