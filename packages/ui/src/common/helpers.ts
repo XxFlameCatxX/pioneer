@@ -110,6 +110,7 @@ export const fileToDataUrl = (file: File) => {
     reader.readAsDataURL(file)
   })
 }
+
 export const resizeImageFile = async (
   file: File,
   width: number,
