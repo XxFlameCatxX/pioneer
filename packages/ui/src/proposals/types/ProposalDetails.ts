@@ -306,6 +306,13 @@ const asSetMembershipLeadInvitationQuota: DetailsCast<'SetMembershipLeadInvitati
   count: fragment.newLeadInvitationQuota,
 })
 
+const asSetMembershipLeadInvitationQuota: DetailsCast<'SetMembershipLeadInvitationQuotaProposalDetails'> = (
+  fragment
+): SetMembershipLeadInvitationQuota => ({
+  type: 'setMembershipLeadInvitationQuota',
+  count: fragment.newLeadInvitationQuota,
+})
+
 const asSetInitialInvitationBalance: DetailsCast<'SetInitialInvitationBalanceProposalDetails'> = (
   fragment
 ): SetInitialInvitationBalanceDetails => ({
